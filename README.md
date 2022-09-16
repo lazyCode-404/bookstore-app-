@@ -9,7 +9,7 @@
 - JAVASCRIPT
 - React
 
-## Live Demo (if available)
+## Live Demo
 [Live Demo Link](unavailable)
 
 ## Getting Started
