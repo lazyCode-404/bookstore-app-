@@ -10,7 +10,7 @@
 - React
 
 ## Live Demo
-[Live Demo Link](unavailable)
+[Live Demo Link]
 
 ## Getting Started
 
@@ -47,7 +47,7 @@ ESLint
 npx eslint .
 ```
 
-## Authors
+## Author
 
 👤 **Bwalya Nonde**
 
@@ -65,7 +65,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/BwalyaNonde/bookstore-app/blob/dev/LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed
 
 ## 🤝 Contributing
 
