@@ -9,8 +9,8 @@
 - JAVASCRIPT
 - React
 
-
-(Screenshot) [bookstore.png] 
+## Live Demo
+[Live Demo Link]
 
 ## Getting Started
 
