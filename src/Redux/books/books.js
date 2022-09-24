@@ -4,21 +4,21 @@ const REMOVE_BOOK = 'books/REMOVE_BOOK';
 const initialState = [
   {
     id: 1,
-    author: 'Tamara',
-    title: 'girl fusion',
-    category: '',
+    author: 'Harper Lee',
+    title: 'To Kill a Mockingbird',
+    category: 'Fiction',
   },
   {
     id: 2,
-    author: 'Tamara',
-    title: '  The church girl',
-    category: '',
+    author: 'F. Scott Fitzgerald',
+    title: '  The Great Gatsby',
+    category: 'Fiction',
   },
   {
     id: 3,
-    author: 'Tamara,Emmanuel',
-    title: 'The girl i Love',
-    category: '',
+    author: 'J. D. Salinger',
+    title: 'The Catcher in the Rye',
+    category: 'Fiction',
   },
 ];
 
