@@ -14,6 +14,13 @@
   },
   "extends": ["airbnb", "plugin:react/recommended"],
   "plugins": ["react"],
+  "import/extensions": [
+    "error",
+    {
+      "js": "ignorePackages"
+    }
+]
+},
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
@@ -24,4 +31,3 @@
     "dist/",
     "build/"
   ]
-}
