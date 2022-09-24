@@ -1,23 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+/* eslint-disable import/no-named-as-default */
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import { BrowserRouter as Routes } from 'react-router-dom';
 import store from './redux/configureStore';
-import Books from './Ui/books';
-import Categories from './Ui/categories';
-import './style.css';
-import '@fontsource/roboto-slab';
-/* eslint-disable react/jsx-key */
-ReactDOM.render(
+import './index.css';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<Books />} />
-          <Route path="/categories" exact element={<Categories />} />
-        </Routes>
-      </Router>
-    </Provider>
+    <Routes>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Routes>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
