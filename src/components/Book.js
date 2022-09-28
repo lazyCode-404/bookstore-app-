@@ -5,8 +5,8 @@ import Books from './Books';
 const BookContent = ({ books }) => (
   <ul className="book-content">
     {
-books.map((book) => <Books key={book.id} book={book} />)
-}
+      books.map((book) => <Books key={book.id} book={book} />)
+   }
   </ul>
 
 );
