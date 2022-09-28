@@ -1,41 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { deleteBook } from '../Redux/books/books';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Book from './Book';
+import AddBook from './addBook';
+import { fetchBooks } from '../redux/books/books';
 
-const Books = (props) => {
+function Books() {
   const dispatch = useDispatch();
-  const {
-    book: {
-      title,
-      author,
-      id,
-      category,
-    },
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
 
-  } = props;
+  const bookList = useSelector((state) => state.books);
 
   return (
     <>
-      <li key={id} className="books-content">
-        {title}
-        {' by '}
-        {author}
-        {' - '}
-        {category}
-      </li>
-      <button type="button" id={id} onClick={() => dispatch(deleteBook(id))}>Remove</button>
+      <ul>
+        {bookList.map((book) => {
+          const { author, title, id } = book;
+          return <Book key={`bk-${id}`} title={title} author={author} id={id} />;
+        })}
+      </ul>
+      <AddBook />
     </>
   );
+}
+Books.defaultProps = {
+  books: [],
 };
-
-Books.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
 export default Books;

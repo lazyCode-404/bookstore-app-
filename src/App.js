@@ -1,20 +1,25 @@
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default-member */
+import { useSelector } from 'react-redux';
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import './index.css';
+import { Route, Routes } from 'react-router-dom';
+import Books from './components/Books';
 import Navbar from './components/Navbar';
-import BookContainer from './components/BookContainer';
-import Categories from './components/Category';
-import './App.css';
+import Categories from './components/Categories';
 
 function App() {
+  const state = useSelector((state) => state);
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<BookContainer />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </div>
+      <div>
+        <Routes>
+          <Route path="/" exact element={<Books />} />
+          <Route path="/categories" element={<Categories categories={state.categories} />} />
+        </Routes>
+      </div>
+    </>
   );
 }
-
 export default App;
